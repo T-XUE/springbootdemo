@@ -1,5 +1,6 @@
 package com.tixue.web;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -17,6 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="com.tixue.biz")
+@MapperScan("com.tixue.dal.dao")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 }

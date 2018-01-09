@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@MapperScan("com.tixue.dal.dao")
 @Import(WebConfig.class)
 public class SpringbootdemoApplication {
 
