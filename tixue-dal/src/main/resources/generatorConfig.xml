@@ -34,7 +34,7 @@
 
         <!-- 生成实体类地址 -->
         <javaModelGenerator targetPackage="com.tixue.dal.model"
-                            targetProject="src/main/java/com/tixue/springbootdemo/model">
+                            targetProject="src/main/java/com/tixue/dal/model">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -46,11 +46,14 @@
 
         <!-- 生成mapxml对应client，也就是接口dao -->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.tixue.dal.dao"
-                             targetProject="/src/main/java/com/tixue/springbootdemo/dao">
+                             targetProject="/src/main/java/com/tixue/dal/dao">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
         <table tableName="user">
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="blog">
             <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
         </table>
     </context>
