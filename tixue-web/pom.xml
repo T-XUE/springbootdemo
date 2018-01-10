@@ -11,8 +11,6 @@
     <groupId>com.tixue</groupId>
     <artifactId>tixue-web</artifactId>
     <version>${tixue-version}</version>
-    <packaging>pom</packaging>
-
     <name>tixue-web</name>
     <description>Demo project for Spring Boot</description>
 
