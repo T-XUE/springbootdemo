@@ -34,6 +34,11 @@
         <dependencies>
             <dependency>
                 <groupId>com.tixue</groupId>
+                <artifactId>tixue-assemble</artifactId>
+                <version>${tixue-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tixue</groupId>
                 <artifactId>tixue-biz</artifactId>
                 <version>${tixue-version}</version>
             </dependency>
@@ -94,6 +99,13 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>${mybatis-generator-maven-plugin-version}</version>
             </dependency>
+
+            <!--Thymeleaf模板-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>1.5.1.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -116,6 +128,7 @@
         </plugins>
     </build>
     <modules>
+        <module>tixue-assemble</module>
         <module>tixue-biz</module>
         <module>tixue-dal</module>
         <module>tixue-web</module>

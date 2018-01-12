@@ -1,7 +1,9 @@
 package com.tixue.web.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @Author: T-XUE
@@ -12,11 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @History: <li>Author: T-XUE</li> <li>Date: 2018-01-09</li> <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
-@RestController
+@Controller
 public class HelloController {
 
-    @GetMapping("hello")
-    public String hello() {
-        return "hello";
+    @RequestMapping(hello)
+    public ModelAndView hello(Model model, String hello) {
+        model.addAttribute("name","TiXUE");
+        return new ModelAndView("index");
     }
 }
