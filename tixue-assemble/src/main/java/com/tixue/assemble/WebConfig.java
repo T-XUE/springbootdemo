@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @Date: Created in 16:02 2018/1/9 0009
  * @Description:
  * @Version: 1.0
- * @Email: tianxue@cqbornsoft.com
+ * @Email: t_xue@foxmail.com
  * @History: <li>Author: T-XUE</li> <li>Date: 2018-01-09</li> <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
