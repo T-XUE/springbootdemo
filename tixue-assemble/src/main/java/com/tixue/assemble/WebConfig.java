@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -17,9 +18,22 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.tixue.biz")
-@ComponentScan(basePackages="com.tixue.web")
+@ComponentScan(basePackages = "com.tixue.biz")
+@ComponentScan(basePackages = "com.tixue.web")
 @MapperScan("com.tixue.dal.dao")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+    /**
+     * # 默认值为 /**
+     * spring.mvc.static-path-pattern=/**
+     * # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+     * spring.resources.static-locations=classpath:/static/
+     *
+     * @param registry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+        super.addResourceHandlers(registry);
+    }
 }

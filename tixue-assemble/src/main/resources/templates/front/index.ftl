@@ -16,7 +16,7 @@
         <div class="fh5co-hero">
             <div class="fh5co-overlay"></div>
             <div class="fh5co-cover" data-stellar-background-ratio="0.5"
-                 style="background-image: url(../static/images/cover_bg_1.jpg);">
+                 style="background-image: url(../images/cover_bg_1.jpg);">
                 <div class="desc">
                     <div class="container">
                         <div class="row">
@@ -280,7 +280,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                        <div href="#"><img src="/static/images/place-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
+                        <div href="#"><img src="/images/place-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
                                            class="img-responsive">
                             <div class="desc">
                                 <span></span>
@@ -293,7 +293,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                        <div href="#"><img src="/static/images/place-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
+                        <div href="#"><img src="/images/place-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
                                            class="img-responsive">
                             <div class="desc">
                                 <span></span>
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                        <div href="#"><img src="/static/images/place-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
+                        <div href="#"><img src="/images/place-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co"
                                            class="img-responsive">
                             <div class="desc">
                                 <span></span>
@@ -420,28 +420,28 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul id="fh5co-destination-list" class="animate-box">
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-1.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-1.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Los Angeles</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-2.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-2.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Hongkong</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-3.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-3.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Italy</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-4.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-4.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Philippines</h2>
@@ -449,7 +449,7 @@
                                 </a>
                             </li>
 
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-5.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-5.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Japan</h2>
@@ -464,35 +464,35 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-6.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-6.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Paris</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-7.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-7.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Singapore</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-8.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-8.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Madagascar</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-9.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-9.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Egypt</h2>
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-forth text-center" style="background-image: url(/static/images/place-10.jpg); ">
+                            <li class="one-forth text-center" style="background-image: url(/images/place-10.jpg); ">
                                 <a href="#">
                                     <div class="case-studies-summary">
                                         <h2>Indonesia</h2>
@@ -519,7 +519,7 @@
                 <div class="row row-bottom-padded-md">
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="fh5co-blog animate-box">
-                            <a href="#"><img class="img-responsive" src="/static/images/place-1.jpg" alt=""></a>
+                            <a href="#"><img class="img-responsive" src="/images/place-1.jpg" alt=""></a>
                             <div class="blog-text">
                                 <div class="prod-title">
                                     <h3><a href="#">30% Discount to Travel All Around the World</a></h3>
@@ -534,7 +534,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="fh5co-blog animate-box">
-                            <a href="#"><img class="img-responsive" src="/static/images/place-2.jpg" alt=""></a>
+                            <a href="#"><img class="img-responsive" src="/images/place-2.jpg" alt=""></a>
                             <div class="blog-text">
                                 <div class="prod-title">
                                     <h3><a href="#">Planning for Vacation</a></h3>
@@ -550,7 +550,7 @@
                     <div class="clearfix visible-sm-block"></div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="fh5co-blog animate-box">
-                            <a href="#"><img class="img-responsive" src="/static/images/place-3.jpg" alt=""></a>
+                            <a href="#"><img class="img-responsive" src="/images/place-3.jpg" alt=""></a>
                             <div class="blog-text">
                                 <div class="prod-title">
                                     <h3><a href="#">Visit Tokyo Japan</a></h3>
@@ -574,7 +574,7 @@
             </div>
         </div>
         <!-- fh5co-blog-section -->
-        <div id="fh5co-testimonial" style="background-image:url(/static/images/img_bg_1.jpg);">
+        <div id="fh5co-testimonial" style="background-image:url(/images/img_bg_1.jpg);">
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -626,7 +626,6 @@
         </div>
 <#include "../layout/footer.ftl">
 
-
     </div>
     <!-- END fh5co-page -->
 
@@ -636,31 +635,7 @@
 <!-- jQuery -->
 
 
-<script src="/static/js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="/static/js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="/static/js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="/static/js/jquery.waypoints.min.js"></script>
-<script src="/static/js/sticky.js"></script>
-
-<!-- Stellar -->
-<script src="/static/js/jquery.stellar.min.js"></script>
-<!-- Superfish -->
-<script src="/static/js/hoverIntent.js"></script>
-<script src="/static/js/superfish.js"></script>
-<!-- Magnific Popup -->
-<script src="/static/js/jquery.magnific-popup.min.js"></script>
-<script src="/static/js/magnific-popup-options.js"></script>
-<!-- Date Picker -->
-<script src="/static/js/bootstrap-datepicker.min.js"></script>
-<!-- CS Select -->
-<script src="/static/js/classie.js"></script>
-<script src="/static/js/selectFx.js"></script>
-
-<!-- Main JS -->
-<script src="/static/js/main.js"></script>
+<#include "../layout/js.ftl">
 
 </body>
 </html>
