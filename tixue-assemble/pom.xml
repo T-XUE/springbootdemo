@@ -13,8 +13,25 @@
     <version>${tixue-version}</version>
     <name>tixue-assemble</name>
     <description>Demo project for Spring Boot</description>
-
     <dependencies>
+        <dependency>
+            <groupId>com.tixue</groupId>
+            <artifactId>tixue-biz</artifactId>
+            <version>${tixue-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tixue</groupId>
+            <artifactId>tixue-dal</artifactId>
+            <version>${tixue-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tixue</groupId>
+            <artifactId>tixue-web</artifactId>
+            <version>${tixue-version}</version>
+        </dependency>
+
         <!-- Spring Boot Mybatis 依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

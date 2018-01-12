@@ -17,9 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloController {
 
-    @RequestMapping(hello)
-    public ModelAndView hello(Model model, String hello) {
+    @RequestMapping("hello")
+    public String hello(Model model) {
         model.addAttribute("name","TiXUE");
-        return new ModelAndView("index");
+        return "index";
     }
 }

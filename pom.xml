@@ -114,7 +114,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration><!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.tixue.web.SpringbootdemoApplication</mainClass>
+                    <mainClass>com.tixue.assemble.SpringbootdemoApplication</mainClass>
                     <layout>WAR</layout>
                 </configuration>
                 <executions>
