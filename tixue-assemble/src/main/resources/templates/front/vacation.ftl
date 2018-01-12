@@ -4,12 +4,12 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
-    #parse("/layout/header.vm")
+<#include "../layout/header.ftl">
 <body>
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
 
-        #parse("/layout/guide.vm")
+    <#include "../layout/guide.ftl">
 
         <!-- end:header-top -->
 
@@ -411,8 +411,7 @@
                 </div>
             </div>
         </div>
-        #parse("/layout/footer.vm")
-
+<#include "../layout/footer.ftl">
 
     </div>
     <!-- END fh5co-page -->
@@ -423,31 +422,31 @@
 <!-- jQuery -->
 
 
-<script src="js/jquery.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
+<script src="/static/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 <!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/sticky.js"></script>
+<script src="/static/js/jquery.waypoints.min.js"></script>
+<script src="/static/js/sticky.js"></script>
 
 <!-- Stellar -->
-<script src="js/jquery.stellar.min.js"></script>
+<script src="/static/js/jquery.stellar.min.js"></script>
 <!-- Superfish -->
-<script src="js/hoverIntent.js"></script>
-<script src="js/superfish.js"></script>
+<script src="/static/js/hoverIntent.js"></script>
+<script src="/static/js/superfish.js"></script>
 <!-- Magnific Popup -->
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/magnific-popup-options.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/magnific-popup-options.js"></script>
 <!-- Date Picker -->
-<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="/static/js/bootstrap-datepicker.min.js"></script>
 <!-- CS Select -->
-<script src="js/classie.js"></script>
-<script src="js/selectFx.js"></script>
+<script src="/static/js/classie.js"></script>
+<script src="/static/js/selectFx.js"></script>
 
 <!-- Main JS -->
-<script src="js/main.js"></script>
+<script src="/static/js/main.js"></script>
 
 </body>
 </html>

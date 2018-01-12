@@ -22,4 +22,9 @@ public class HelloController {
         model.addAttribute("name","TiXUE");
         return "index";
     }
+
+    @RequestMapping("index")
+    public String index(Model model) {
+        return "front/index";
+    }
 }
