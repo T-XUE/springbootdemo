@@ -28,6 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
      * spring.mvc.static-path-pattern=/**
      * # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
      * spring.resources.static-locations=classpath:/static/
+     * 声明静态资源文件目录
      *
      * @param registry
      */
