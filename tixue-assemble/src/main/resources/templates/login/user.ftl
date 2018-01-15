@@ -17,6 +17,7 @@
                 <p style="margin-top: 25px; font-size: 20; color: crimson">欢迎你:${userName}!</p>
                 <form action="/logout.htm" method="post">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                ${Session.SPRING_SECURITY_CONTEXT.authentication.principal.username}
                     <button class="btn btn-danger" style="margin-top: 20px">退出登录</button>
                 </form>
             </div>
