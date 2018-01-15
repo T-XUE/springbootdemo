@@ -49,6 +49,11 @@
             </dependency>
             <dependency>
                 <groupId>com.tixue</groupId>
+                <artifactId>tixue-util</artifactId>
+                <version>${tixue-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tixue</groupId>
                 <artifactId>tixue-web</artifactId>
                 <version>${tixue-version}</version>
             </dependency>
@@ -111,6 +116,7 @@
         <module>tixue-assemble</module>
         <module>tixue-biz</module>
         <module>tixue-dal</module>
+        <module>tixue-util</module>
         <module>tixue-web</module>
     </modules>
 

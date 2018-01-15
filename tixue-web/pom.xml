@@ -48,5 +48,9 @@
             <groupId>com.tixue</groupId>
             <artifactId>tixue-biz</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.tixue</groupId>
+            <artifactId>tixue-util</artifactId>
+        </dependency>
     </dependencies>
 </project>

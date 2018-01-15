@@ -18,7 +18,7 @@ import java.util.List;
  * @Date: Created in 11:39 2018/1/15 0015
  * @Description:
  * @Version: 1.0
- * @Email: tianxue@cqbornsoft.com
+ * @Email: t_xue@foxmail.com
  * @History: <li>Author: T-XUE</li> <li>Date: 2018-01-15</li> <li>Version: 1.0</li>
  * <li>Content: create</li>
  */

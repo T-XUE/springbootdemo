@@ -1,5 +1,6 @@
 package com.tixue.web.controller.userManage;
 
+import com.tixue.biz.service.base.TiXueResult;
 import com.tixue.biz.service.user.UserService;
 import com.tixue.dal.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.security.Principal;
 
 /**
@@ -18,7 +21,7 @@ import java.security.Principal;
  * @Date: Created in 13:38 2018/1/15 0015
  * @Description:
  * @Version: 1.0
- * @Email: tianxue@cqbornsoft.com
+ * @Email: t_xue@foxmail.com
  * @History: <li>Author: T-XUE</li> <li>Date: 2018-01-15</li> <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
@@ -34,26 +37,18 @@ public class UserManageController {
     }
 
     @PostMapping("/register.htm")
-    public String register(String username, String password) {
+    public String register(String username, String password, HttpServletResponse response) throws IOException {
         UserInfo userInfo = new UserInfo();
         userInfo.setUserName(username);
         userInfo.setLogPassword(new BCryptPasswordEncoder().encode(password));
-        userService.insert(userInfo);
-        return "login/login";
+        TiXueResult result = userService.insert(userInfo);
+        response.sendRedirect("/toLogin.htm");
+        return null;
     }
 
     @GetMapping("/toLogin.htm")
     public String toLogin(Model model) {
         return "login/login";
-    }
-
-    @RequestMapping("/doLogin.htm")
-    public String doLogin(String userName, String passWord) {
-//        UserInfo userInfo = new UserInfo();
-//        userInfo.setUserName(userName);
-//        userInfo.setLogPassword(new BCryptPasswordEncoder().encode(passWord));
-//        userService.insert(userInfo);
-        return "front/index";
     }
 
     @GetMapping("user/userCenter.htm")
