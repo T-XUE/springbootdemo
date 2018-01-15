@@ -1,4 +1,4 @@
-package com.tixue.assemble;
+package com.tixue.assemble.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.ComponentScan;

@@ -57,54 +57,53 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>1.5.9.RELEASE</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
                 <version>1.5.9.RELEASE</version>
             </dependency>
-
             <!-- Spring Boot Redis 依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-redis</artifactId>
                 <version>${spring-boot-starter-redis-version}</version>
             </dependency>
-
             <!-- Spring Boot Mybatis 依赖 -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot}</version>
             </dependency>
-
             <!-- MySQL 连接驱动依赖 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector}</version>
             </dependency>
-
             <!-- Junit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit-version}</version>
             </dependency>
-
             <!--idea自动生成mybatis用-->
             <dependency>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>${mybatis-generator-maven-plugin-version}</version>
             </dependency>
-
-            <!--Thymeleaf模板-->
+            <!--freemarker模板-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-freemarker</artifactId>
-                <version>1.5.1.RELEASE</version>
+                <version>1.5.9.RELEASE</version>
+            </dependency>
+            <!--Spring-Security-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>1.5.9.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

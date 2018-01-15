@@ -1,7 +1,7 @@
 package com.tixue.web.controller;
 
 import com.tixue.dal.model.User;
-import com.tixue.biz.service.UserService;
+import com.tixue.biz.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
