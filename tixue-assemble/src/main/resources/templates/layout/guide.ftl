@@ -6,7 +6,7 @@
             <nav id="fh5co-menu-wrap" role="navigation">
                 <ul class="sf-menu" id="fh5co-primary-menu">
                     <#if !service??> <#assign service="" /> </#if>
-                    <li <#if service=="index"> class="active" </#if>><a href="index.htm">主页</a></li>
+                    <li <#if service=="index"> class="active" </#if>><a href="/index.htm">主页</a></li>
                     <li <#if service=="vacation"> class="active" </#if>>
                         <a href="vacation.htm" class="fh5co-sub-ddown">度假</a>
                         <ul class="fh5co-sub-menu">
@@ -17,11 +17,11 @@
                             <li><a href="#">Django &amp; Python</a></li>
                         </ul>
                     </li>
-                    <li <#if service=="flight"> class="active" </#if>><a href="flight.htm">航班</a></li>
-                    <li <#if service=="hotel"> class="active" </#if>><a href="hotel.htm">酒店</a></li>
-                    <li <#if service=="car"> class="active" </#if>><a href="car.htm">租车</a></li>
-                    <li <#if service=="blog"> class="active" </#if>><a href="user/userCenter.htm">个人中心</a></li>
-                    <li <#if service=="contact"> class="active" </#if>><a href="contact.htm">联系我们</a></li>
+                    <li <#if service=="flight"> class="active" </#if>><a href="/flight.htm">航班</a></li>
+                    <li <#if service=="hotel"> class="active" </#if>><a href="/hotel.htm">酒店</a></li>
+                    <li <#if service=="car"> class="active" </#if>><a href="/car.htm">租车</a></li>
+                    <li <#if service=="blog"> class="active" </#if>><a href="/user/userCenter.htm">个人中心</a></li>
+                    <li <#if service=="contact"> class="active" </#if>><a href="/contact.htm">联系我们</a></li>
                 </ul>
             </nav>
         </div>

@@ -3,8 +3,11 @@ package com.tixue.biz.service.user.impl;
 import com.tixue.biz.service.user.UserService;
 import com.tixue.dal.dao.UserInfoMapper;
 import com.tixue.dal.model.UserInfo;
+import com.tixue.dal.model.UserInfoExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @Author: T-XUE
@@ -23,7 +26,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserInfo getByUsername(String userName) {
-        return userInfoMapper.selectByUsername(userName);
+        UserInfoExample example = new UserInfoExample();
+        UserInfoExample.Criteria criteria = example.createCriteria();
+        criteria.andUserNameEqualTo(userName);
+        List<UserInfo> userInfos = userInfoMapper.selectByExample(example);
+        if (userInfos != null && userInfos.size() > 0) {
+            return userInfos.get(0);
+        } else {
+            return null;
+        }
     }
 
     @Override

@@ -3,12 +3,15 @@ package com.tixue.web.controller.userManage;
 import com.tixue.biz.service.user.UserService;
 import com.tixue.dal.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.security.Principal;
 
 /**
  * @Author: T-XUE
@@ -54,7 +57,8 @@ public class UserManageController {
     }
 
     @GetMapping("user/userCenter.htm")
-    public String userCenter(Model model) {
+    public String userCenter(@AuthenticationPrincipal Principal principal, Model model) {
+        model.addAttribute("userName",principal.getName());
         return "login/user";
     }
 }

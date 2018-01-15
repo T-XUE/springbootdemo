@@ -5,11 +5,8 @@
     <title>登录 | 爱旅行@Travel</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 </head>
-
-<body style="background-color: #f1f1f1; padding-bottom: 0">
-
 <#include "../layout/header.ftl">
-
+<body style="background-color: #f1f1f1; padding-bottom: 0">
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
         <#include "../layout/guide.ftl">
@@ -39,7 +36,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                 <div class="form-group">
                                     <div class="input-group col-md-6 col-md-offset-3 col-xs-12 ">
                                         <button type="submit" class="btn btn-primary btn-block">登录</button>

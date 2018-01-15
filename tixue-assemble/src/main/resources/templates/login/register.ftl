@@ -5,11 +5,8 @@
     <title>注册 | 爱旅行@Travel</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 </head>
-
-<body style="background-color: #f1f1f1; padding-bottom: 0">
-
 <#include "../layout/header.ftl">
-
+<body style="background-color: #f1f1f1; padding-bottom: 0">
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
         <#include "../layout/guide.ftl">
@@ -56,7 +53,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <#include "../layout/footer.ftl">
     </div>
