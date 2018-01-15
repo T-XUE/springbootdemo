@@ -50,11 +50,10 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="user">
-            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        <table tableName="user_info">
+            <!--<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>-->
         </table>
-        <table tableName="blog">
-            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
-        </table>
+        <table tableName="role"></table>
+        <table tableName="user_role"></table>
     </context>
 </generatorConfiguration>
