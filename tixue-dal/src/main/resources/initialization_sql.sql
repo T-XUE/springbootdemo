@@ -21,7 +21,7 @@ CREATE TABLE `user_info` (
     'overdue'
   ) DEFAULT 'normal' COMMENT '用户状态',
   `real_name_authentication` VARCHAR (32) DEFAULT NULL COMMENT '实名认证状态：IS-通过，IN-申请中,NO-未通过,N-未认证',
-  `pwd_error_count` INT (11) NOT NULL DEFAULT '0' COMMENT '登录密码错误次数',
+  `pwd_error_count` INT (11) DEFAULT 0 COMMENT '登录密码错误次数',
   `change_lock_time` TIMESTAMP NULL DEFAULT NULL COMMENT '锁定或解锁时间',
   `birthday` VARCHAR (30) DEFAULT NULL COMMENT '出生年月',
   `user_custom_type` VARCHAR (32) DEFAULT NULL COMMENT '用户类型',

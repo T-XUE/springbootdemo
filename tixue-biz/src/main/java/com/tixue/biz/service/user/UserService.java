@@ -19,4 +19,6 @@ public interface UserService {
      * @return
      */
     UserInfo getByUsername(String userName);
+
+    int insert(UserInfo userInfo);
 }

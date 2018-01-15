@@ -34,14 +34,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (userEntity == null) {
             throw new UsernameNotFoundException("用户不存在！");
         }
-        List<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(userEntity.getAccountId());
+        List<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities("USER");
         return new User(userEntity.getUserName(), userEntity.getLogPassword(), simpleGrantedAuthorities);
     }
 
     /**
      * 权限字符串转化
      * <p>
-     * 如 "USER,ADMIN" -> SimpleGrantedAuthority("USER") + SimpleGrantedAuthority("ADMIN")
      *
      * @param roleStr 权限字符串
      */
