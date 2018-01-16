@@ -16,9 +16,9 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">窗帘会管理平台-登录</h2>
-        <input type="username" class="input-block-level" placeholder="用户名">
-        <input type="password" class="input-block-level" placeholder="密码">
+        <h2 class="form-signin-heading">窗帘会管理平台</h2>
+        <input type="text" class="input-block-level" name="username" placeholder="用户名">
+        <input type="password" class="input-block-level" name="password" placeholder="密码">
         <!--<label class="checkbox">-->
           <!--<input type="checkbox" value="remember-me"> Remember me-->
         <!--</label>-->
