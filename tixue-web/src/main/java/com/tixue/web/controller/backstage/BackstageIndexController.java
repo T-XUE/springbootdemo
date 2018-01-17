@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date: Created in 17:10 2018/1/16 0016
  * @Description:
  * @Version: 1.0
- * @Email: tianxue@cqbornsoft.com
+ * @Email: t_xue@foxmail.com
  * @History: <li>Author: T-XUE</li> <li>Date: 2018-01-16</li> <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
