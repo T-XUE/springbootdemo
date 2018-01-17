@@ -110,10 +110,12 @@
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>1.5.9.RELEASE</version>
             </dependency>
+            <!--热部署支持-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
                 <version>1.5.9.RELEASE</version>
+                <optional>true</optional>
             </dependency>
         </dependencies>
     </dependencyManagement>

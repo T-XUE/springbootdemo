@@ -68,6 +68,7 @@
                 <configuration><!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.tixue.assemble.SpringbootdemoApplication</mainClass>
                     <layout>WAR</layout>
+                    <fork>true</fork>
                 </configuration>
                 <executions>
                     <execution>
