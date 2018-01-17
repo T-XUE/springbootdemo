@@ -34,7 +34,8 @@ public class AnyUserDetailsService implements UserDetailsService {
         if (userEntity == null) {
             throw new UsernameNotFoundException("用户不存在！");
         }
-        List<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities("ROLE_USER,ROLE_ADMIN");
+        List<String> roleList = userService.getUserRoleCodeByUserId(userEntity.getUserId());
+        List<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(roleList);
         return new User(userEntity.getUserName(), userEntity.getLogPassword(), simpleGrantedAuthorities);
     }
 
@@ -42,12 +43,11 @@ public class AnyUserDetailsService implements UserDetailsService {
      * 权限字符串转化
      * <p>
      *
-     * @param roleStr 权限字符串
+     * @param roleList 权限字符串
      */
-    private List<SimpleGrantedAuthority> createAuthorities(String roleStr) {
-        String[] roles = roleStr.split(",");
+    private List<SimpleGrantedAuthority> createAuthorities(List<String> roleList) {
         List<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>();
-        for (String role : roles) {
+        for (String role : roleList) {
             simpleGrantedAuthorities.add(new SimpleGrantedAuthority(role));
         }
         return simpleGrantedAuthorities;

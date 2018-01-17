@@ -2,12 +2,14 @@ package com.tixue.biz.service.user.impl;
 
 import com.tixue.biz.service.base.TiXueResult;
 import com.tixue.biz.service.user.UserService;
+import com.tixue.dal.dao.RoleMapper;
 import com.tixue.dal.dao.UserInfoMapper;
-import com.tixue.dal.model.UserInfo;
-import com.tixue.dal.model.UserInfoExample;
+import com.tixue.dal.dao.UserRoleMapper;
+import com.tixue.dal.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +26,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserInfoMapper userInfoMapper;
+    @Autowired
+    private UserRoleMapper userRoleMapper;
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Override
     public UserInfo getByUsername(String userName) {
@@ -36,6 +42,20 @@ public class UserServiceImpl implements UserService {
         } else {
             return null;
         }
+    }
+
+    @Override
+    public List<String> getUserRoleCodeByUserId(long userId) {
+        List<String> roleList = new ArrayList<>();
+        UserRoleExample example = new UserRoleExample();
+        UserRoleExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        List<UserRole> list = userRoleMapper.selectByExample(example);
+        for (UserRole userRole : list) {
+            Role role = roleMapper.selectByPrimaryKey(userRole.getRoleId());
+            roleList.add(role.getRoleCode());
+        }
+        return roleList;
     }
 
     @Override
