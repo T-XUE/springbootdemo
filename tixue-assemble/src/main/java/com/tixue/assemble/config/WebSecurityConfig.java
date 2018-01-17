@@ -4,12 +4,10 @@ import com.tixue.biz.service.login.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,9 +33,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/user/**").hasRole("USER")
                 .and()
-                .formLogin().loginPage("/toLogin.htm").defaultSuccessUrl("/index.htm")
+                .formLogin()
+                .loginPage("/toLogin.htm")
+                .defaultSuccessUrl("/index.htm")
                 .and()
-                .logout().logoutUrl("/logout.htm").logoutSuccessUrl("/toLogin.htm");
+                .logout()
+                .logoutUrl("/logout.htm")
+                .logoutSuccessUrl("/toLogin.htm");
     }
 
     /**
@@ -48,6 +50,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         builder.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
+
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web
+//                .ignoring()
+//                .antMatchers("/resources/**");
+//    }
 
     /**
      * 密码加密

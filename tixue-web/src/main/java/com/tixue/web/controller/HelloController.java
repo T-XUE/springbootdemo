@@ -43,4 +43,9 @@ public class HelloController {
         model.addAttribute("service", service);
         return"front/" + service;
     }
+
+    @RequestMapping("admin/login.htm")
+    public String backstageLogin(Model model) {
+        return "backstage/login";
+    }
 }
