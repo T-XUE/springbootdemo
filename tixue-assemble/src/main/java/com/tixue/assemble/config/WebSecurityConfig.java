@@ -1,6 +1,6 @@
 package com.tixue.assemble.config;
 
-import com.tixue.biz.service.login.UserDetailsServiceImpl;
+import com.tixue.biz.service.login.AnyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,11 +12,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private UserDetailsServiceImpl userDetailsService;
+    private AnyUserDetailsService anyUserDetailsService;
 
     @Autowired
-    public void setAnyUserDetailsService(UserDetailsServiceImpl userDetailsService) {
-        this.userDetailsService = userDetailsService;
+    public void setAnyUserDetailsService(AnyUserDetailsService anyUserDetailsService) {
+        this.anyUserDetailsService = anyUserDetailsService;
     }
 
     /**
@@ -47,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder builder) throws Exception {
-        builder.userDetailsService(userDetailsService)
+        builder.userDetailsService(anyUserDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
 

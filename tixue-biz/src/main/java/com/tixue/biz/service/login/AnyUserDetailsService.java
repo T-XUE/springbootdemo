@@ -23,7 +23,7 @@ import java.util.List;
  * <li>Content: create</li>
  */
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class AnyUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserService userService;
