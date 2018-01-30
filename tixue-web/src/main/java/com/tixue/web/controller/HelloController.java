@@ -1,11 +1,13 @@
 package com.tixue.web.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,7 +28,7 @@ public class HelloController {
 
     @RequestMapping("hello")
     public String hello(Model model) {
-        model.addAttribute("name","TiXUE");
+        model.addAttribute("name", "TiXUE");
         return "index";
     }
 
@@ -41,11 +43,20 @@ public class HelloController {
                            @PathVariable String service) {
         logger.info("进入页面{}", service);
         model.addAttribute("service", service);
-        return"front/" + service;
+        return "front/" + service;
     }
 
     @RequestMapping("admin/login.htm")
     public String backstageLogin(Model model) {
         return "backstage/login";
+    }
+
+    @ResponseBody
+    @RequestMapping("hello.json")
+    public Object helloJson(Model model) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("姓名", "tx");
+        jsonObject.put("年龄", "15");
+        return jsonObject;
     }
 }

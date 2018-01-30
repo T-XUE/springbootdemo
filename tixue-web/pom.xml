@@ -52,5 +52,9 @@
             <groupId>com.tixue</groupId>
             <artifactId>tixue-util</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
     </dependencies>
 </project>
