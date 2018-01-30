@@ -1,8 +1,11 @@
 package com.tixue.web.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.tixue.dal.dao.UserInfoMapper;
+import com.tixue.dal.model.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +28,9 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloController {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    private UserInfoMapper userInfoMapper;
 
     @RequestMapping("hello")
     public String hello(Model model) {
@@ -55,8 +61,9 @@ public class HelloController {
     @RequestMapping("hello.json")
     public Object helloJson(Model model) {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("姓名", "tx");
-        jsonObject.put("年龄", "15");
+        UserInfo userInfo = userInfoMapper.selectByUsername("tx");
+        jsonObject.put("姓名", userInfo.getUserName());
+        jsonObject.put("年龄", userInfo.getUserId());
         return jsonObject;
     }
 }

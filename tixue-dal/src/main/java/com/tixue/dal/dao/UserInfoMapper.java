@@ -4,6 +4,7 @@ import com.tixue.dal.model.UserInfo;
 import com.tixue.dal.model.UserInfoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.session.RowBounds;
 
@@ -32,6 +33,7 @@ public interface UserInfoMapper {
 
     int updateByPrimaryKey(UserInfo record);
 
+    @ResultMap("BaseResultMap")
     @Select("select * from user_info where user_name = #{username}")
     UserInfo selectByUsername(@Param("username") String username);
 }
