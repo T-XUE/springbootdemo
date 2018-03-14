@@ -2,6 +2,7 @@ package com.tixue.assemble.config;
 
 import com.tixue.biz.service.login.AnyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -71,6 +72,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/resources/**");
 //    }
 
+//    /**
+//     * 去除角色中role_的前缀
+//     * 表达式需要.access("hasRole('ADMIN')");
+//     *
+//     * @throws Exception
+//     */
+//    @Bean
+//    GrantedAuthorityDefaults grantedAuthorityDefaults() {
+//        return new GrantedAuthorityDefaults(""); // Remove the ROLE_ prefix
+//    }
+
     /**
      * 密码加密
      */
@@ -79,4 +91,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    @ConditionalOnMissingBean(ClassPathTldsLoader.class)
+    public ClassPathTldsLoader classPathTldsLoader() {
+        return new ClassPathTldsLoader();
+    }
 }
