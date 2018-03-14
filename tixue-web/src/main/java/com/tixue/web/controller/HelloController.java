@@ -52,11 +52,6 @@ public class HelloController {
         return "front/" + service;
     }
 
-    @RequestMapping("admin/login.htm")
-    public String backstageLogin(Model model) {
-        return "backstage/login";
-    }
-
     @ResponseBody
     @RequestMapping("hello.json")
     public Object helloJson(Model model) {
@@ -65,5 +60,10 @@ public class HelloController {
         jsonObject.put("姓名", userInfo.getUserName());
         jsonObject.put("年龄", userInfo.getUserId());
         return jsonObject;
+    }
+
+    @RequestMapping("backstageLogin.htm")
+    public String backstageLogin(Model model) {
+        return "backstage/login";
     }
 }

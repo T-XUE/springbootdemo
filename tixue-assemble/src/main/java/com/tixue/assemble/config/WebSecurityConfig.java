@@ -40,6 +40,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutUrl("/logout.htm")
                 .logoutSuccessUrl("/toLogin.htm");
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/").permitAll()
+//                .antMatchers("/backstage/**").hasRole("ADMIN")
+//                .and()
+//                .formLogin()
+//                .loginPage("/backstageLogin.htm")
+//                .defaultSuccessUrl("/backstage/index.htm")
+//                .and()
+//                .logout()
+//                .logoutUrl("/logout.htm")
+//                .logoutSuccessUrl("/toLogin.htm");
     }
 
     /**

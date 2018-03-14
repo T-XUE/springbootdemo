@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("backstage")
 public class BackstageIndexController {
 
+
     @RequestMapping("index.htm")
-    public String backstageLogin(Model model) {
+    public String index(Model model) {
         model.addAttribute("service", "index");
         return "backstage/index";
     }
