@@ -12,6 +12,7 @@
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <plugin type="com.tixue.util.MybatisCommentPlugin"></plugin>
 
 
         <!-- 关闭注解信息 -->

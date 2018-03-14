@@ -28,6 +28,7 @@
         <spring-boot-starter-redis-version>1.3.2.RELEASE</spring-boot-starter-redis-version>
         <junit-version>4.12</junit-version>
         <mybatis-generator-maven-plugin-version>1.3.5</mybatis-generator-maven-plugin-version>
+        <mybatis-generator-core-version>1.3.5</mybatis-generator-core-version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +94,11 @@
                 <version>${junit-version}</version>
             </dependency>
             <!--idea自动生成mybatis用-->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator-core-version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
