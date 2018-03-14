@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @Import(WebConfig.class)
-public class SpringbootdemoApplication extends SpringBootServletInitializer {
+public class SpringbootApplication extends SpringBootServletInitializer {
 
     /**
      * 打war包 用外部tomcat容器访问配置
@@ -18,10 +18,10 @@ public class SpringbootdemoApplication extends SpringBootServletInitializer {
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SpringbootdemoApplication.class);
+        return application.sources(SpringbootApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootdemoApplication.class, args);
+        SpringApplication.run(SpringbootApplication.class, args);
     }
 }
