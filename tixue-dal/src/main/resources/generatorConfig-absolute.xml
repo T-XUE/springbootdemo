@@ -51,6 +51,14 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="txddd"></table>
+        <table tableName="txddd"
+               domainObjectName="TxDdd"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true" />
+        </table>
     </context>
 </generatorConfiguration>

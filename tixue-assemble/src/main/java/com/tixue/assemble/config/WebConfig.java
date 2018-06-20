@@ -1,6 +1,6 @@
 package com.tixue.assemble.config;
 
-import org.mybatis.spring.annotation.MapperScan;
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.context.annotation.Bean;
