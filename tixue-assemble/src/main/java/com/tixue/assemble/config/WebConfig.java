@@ -22,8 +22,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.tixue.biz")
-@ComponentScan(basePackages = "com.tixue.web")
+@ComponentScan(basePackages = {"com.tixue.biz","com.tixue.web"})
 @MapperScan("com.tixue.dal.dao")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
